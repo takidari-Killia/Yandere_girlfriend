@@ -18,8 +18,9 @@ jobs:
       - name: Dependencias
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential git zip unzip autoconf automake libtool pkg-config zlib1g-dev libncurses-dev cmake libffi-dev libssl-dev
-          pip install buildozer cython
+          sudo apt-get install -y build-essential git zip unzip autoconf automake libtool pkg-config zlib1g-dev libncurses-dev cmake libffi-dev libssl-dev patch
+          pip install --upgrade pip
+          pip install "Cython<3.0" buildozer
       - uses: actions/cache@v4
         with:
           path: ~/.buildozer
@@ -30,3 +31,4 @@ jobs:
         with:
           name: yandere-apk
           path: bin/*.apk
+          
