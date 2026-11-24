@@ -14,7 +14,7 @@ android.api = 33
 android.minapi = 26
 android.archs = arm64-v8a
 android.accept_sdk_license = True
-services = guardian:service/guardian.py:foreground
+#services = guardian:service/guardian.py:foreground
 
 [buildozer]
 log_level = 2
